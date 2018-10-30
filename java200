@@ -1,0 +1,145 @@
+
+
+
+
+
+Java 200
+
+复制代码给别人：
+1.	Jar
+                生成 jar
+                点项目
+                Open Module Settings
+                Artifacts
+                +
+                Jar 
+                Empty 
+                Name: "dice"
+                +
+                module output 
+                ok
+
+                Menu > Build > Artifacts > Build .
+
+
+2.	倒入lib
+// 创建 lib 文件夹
+                Project 
+                > 点 右键
+                > 点 new 
+                > 点 directory 
+                > 填 lib
+                > 点 ok 
+
+                // 拷贝 jar 到 lib 下
+                : 04_jar 项目
+                > 右键点 lib 文件夹
+                > 点 Show in Explorer(win) / Reveal in Finder(mac)
+                : 03_jar 项目
+                > 找到 dice.jar 
+                > 点 右键
+                > 点 Show in Explorer(win) / Reveal in Finder(mac)
+                > 手工把 在 03 下的 dice.jar 拷贝到 04 的 lib 下
+
+                // 04 导入 jar  
+                project Project 
+                > 点 右键
+                > 点 Open module settings 
+                > 引导到 modules > 04_lib > Dependencies
+                > 点 + 
+                > 点 jar 
+                > 找到 在 lib 文件夹下的 dice.jar 
+                > 点 ok 
+
+                // 在代码里使用 dice
+
+
+Command+1 开关左边窗口
+
+Java ->Scala/Kotlin:
+1.	Xxx.scala->XX.java->XX.class->machine code
+
+Syntax sugar: allow you to omission some words.
+Ex: LinkedList<Integer> list=new LinkedList<>();  
+
+Maven : (better to javascripter)  ／Gradle /SBT/ IVY/ Grape/Leinigen/Buildr
+
+Java: Maven/Gradle/SBT
+JavaScript: npm/yarn
+Swift: CocoaPod/Swift Package Manage
+Python: pip/coda
+
+#project 06_maven
+
+        # 建新项目
+		06_maven
+
+        # 转为 maven 
+        Project
+        点右键 
+        Add Framework support 
+        选上 maven，勾上 
+        点确定
+        出现的文件上 按回车 三次
+
+        # maven 关联 要安装的软件 
+        去网址上 复制 dependency 
+        回到 maven 的文件 
+        增加 Dependencies 
+        里面 粘贴 dependency
+
+
+        # 安装 
+        界面 
+            点击 import / auto-import 
+        控制台
+            cd .?./06_maven 
+            mvn install / mvn update
+
+
+GUI：graphical user interface
+CGI：
+
+Deep Level: maintain pix maxtric, 1920*1080 RGB
+
+Swing: a framework of Java, out of data. A little stupid to use.
+
+
+软件开发流程：
+需求： 需求统计 和确认
+              Consulting: 跟每个甲方单独聊天
+               Product ： 做个项目，大家做
+
+设计
+
+开发
+
+测试
+
+集成：Git
+
+部署：
+
+实际中的问题：常常回溯到前一步
+
+瀑布： 做好每一步，争取一次性集成不出问题，然后立刻部署
+
+迭代／螺旋：
+：完成某个小功能的模块，把模块分的越来越细。迭代：先写在改。
+
+
+Agile/ Scrum/Kanban
+
+
+
+
+What kind of exception:
+Halder exception
+Null Pointer Exception
+Number format exception
+
+
+
+
+
+

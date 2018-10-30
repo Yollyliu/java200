@@ -1,0 +1,1352 @@
+资源：
+    官网
+    note
+    https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/
+
+目标
+    comp 352  ex Al
+    comp 6651 ex NP
+    过面试题
+    PCT
+
+配套练习题：
+    https://leetcode.com
+
+
+6 7 3 8 4
+15
+
+两个数 的 最大的和 = 两个最大的数 的 和
+
+
+
+
+
+
+先排序，最大两个 相加
+
+先找最大的，再找次大的 相加
+
+两两排列组合 加一起 输出最大的，保存当前最大的
+
+Max(A, n)
+
+
+遍历的次数
+计算的次数
+判断次数
+循环
+
+输入的数量
+
+数据的内容
+
+CPU频率
+内存大小
+
+T(n)
+
+
+
+
+
+
+
+
+
+
+
+
+时间：
+影响时间：
+输入的个数
+硬件环境
+输入的数据
+
+
+Integer.MIN_VALUE;
+
+算法分类
+    1 CPU + 1 MEMORY = 基础算法
+    1 CPU + 1 MEMORY + 1 DISK = 数据库算法
+    N CPU + 1 MEMORY @ 1 COMPUTER = 平行算法
+    N CPU + N MEMORY + NETWORK = 分布式算法
+    DATA = AI 算法
+    PIXAL = 图像 算法
+
+算法效率
++   原因
+    比较两个针对一个问题的不同的算法 谁好
+
++   时间复杂度
+    T(n)
+
+    T(n) = 2n + 1
+
++   时间复杂度的分析
+    最差的情况 worst case
+    average case
+    最好的情况 best case
+
++
+    5n^2 + 1
+    5n + 2
+    6n + 1
+
++   极限
+    如果是相加
+    如果 n^2 对 n 有绝对优势了
+    那么 n 并不会 对 n^2 的时间起到影响
+
+    最高项的常数系数不会影响结果
+
+
+
++   常量差别的问题
+    4n + 3 < 6n + 3
+    同一个语言
+    同一个硬件
+    快了，但是没有快太多
+
+    不管 n 有多大
+    1.5倍
+
++   不同公式的比较
+    因为数学原因
+    肯定会在某些值 e
+    e 之前 两个算法没有绝对的快
+    e 之后 其中一个算法 针对 另外一个算法 有绝对优势
+    当 n 变大时 -> Infinity
+    两个算法的倍数 不是常量
+    其中一个慢的算法的时间 / 快的算法的时间 -> Infinity
+
++   比较
+    1n + 1 vs 1000n + 1
+
+    T1(n) / T2(n) -> 0
+
+    n^2 vs 10000_0000n
+
+1:30
+http://www.zhaozhepublic.com/encs111/lab/
+
+先找最大的，再找第二大的，再加起来
+所有可能的都配对，找最大的
+先排序，立刻找到最大的两个，加起来
+
+
+数据数量
+硬件
+数据内容
+
+T(n) = n - 1
+
+
+
+1. n
+2.
+    7
+    1   2   4   8
+
+    65
+    1 2 4 8 16 32 64 128
+    2^n <-> 2^(n+1)
+
+    log2n logn
+    logn
+
+C.
+    n^2
+
+D.
+    i = 0 j = 0
+    i = 1 j 1 time
+    i = 2 j 2 times
+    i = n j n times
+    i 0 -> n - 1
+    (0 + n - 1) * n / 2
+    n^2 - n
+    n^2
+
+E.
+    0   i = 1   j 1 times 2^0
+    1   i = 2   j 2 times 2^1
+    2   i = 4   j 4 times 2^2
+    3   i = 8   j 8 times 2^
+    t   i = n'  j n' times 2^t
+    t = floor(log2n)
+    n' + .... + 8 + 4 + 2 + 1
+    2 * n' - 1
+    n' 是 n 最近的小的 2^t
+    n' max -> n
+    n' min -> n/2
+
+    2 * n' - 1
+    2 * n - 1
+    n - 1
+    n
+
+
+    f(n) 算法 f 的 时间
+    g(n) 算法 g 的 时间
+
+    n -> Infinity
+    f(n)/g(n) = 0
+    f 比 g f 有绝对优势
+
+    f(n) << g(n)
+
+    f(n) g(n)
+
+    f(n) = 2n^2 + n
+    g(n) = 3n^2
+
+    f(n) = O(g(n))
+    e c
+    n > e, c
+    f(n) < cg(n)
+    f(n)/c < g(n)
+    c = 1
+    e = 100
+    f(n) <<= g(n)
+
+    f(n) == n^2
+
+    f(n) >>= n^2 && f(n) <<= n^2
+
+
+    f(n) << g(n)
+    f(n) = o(g(n)) -> f(n) << g(n)
+    f(n) = O(g(n)) -> f(n) <<= g(n)
+
+    1 < 3
+    1 <= 3
+
+    a < b -> a <=b
+    a <=b -> a < b
+
+
+    n^2 - n = O(n^2)
+    f(n) = n^2 - n
+    g(n) = n^2
+
+    c = 1000
+    f(n) < g(n)
+
+    a + b + c + d = O(a)
+
+    Ex
+    1.
+        f(n) = O(g(n)) but
+        g(n) != O(f(n))
+
+        logn , 3log(n^2)
+        n^2, nlogn
+        n, 1000n + 5
+        10, n
+
+        c > logn > n > n^2 > c^n > n!
+
+day 2
+ADT
+    [......]
+    []
+
+List
+    功能
+        添加  任何位置添加 末尾
+        删除  任何位置删除 末尾
+        大小
+        查   获取到某个位置的元素
+    特性
+        保持顺序
+
+Array-based List
+    方案 Theta
+    get Theta(1)
+    add Theta(1)
+        有坑 扩容（之后讲）
+    add at index
+        best case 1
+        worst case n
+        average case n (概率计算)
+    remove 1
+        最好 在最后面 1
+        最差 在0位置 n
+        平均 n
+    size 1
+
+Linked-based List
+    get
+        最好 头或者尾 1
+        最差 中间 n/2 => n
+        平均 n
+    add 末尾 1
+    add index
+        最好 头尾
+        最差 中间 n
+        平均 n
+    remove 尾巴 1
+    remove index
+        最好 头尾 1
+        最差 中间 n
+        平均 n
+    size 1
+
+Java List API
+    List interface
+    ArrayList class
+    LinkedList class
+
+Stack
+栈
+    ADT
+        功能
+            存
+            取
+            查 顶
+            大小
+        特性
+            先存的最后取出来
+
+Array-based Stack
+    List 一样
+        不支持 add index , remove index
+        push 1
+        pop 1
+        peek 1
+        size 1
+
+Stack Java API
+    Stack class
+    LinkedList class
+        addFirst
+        removeFirst
+        addLast
+        removeLast
+
+括号合法性问题
+    "()[]{}"
+    "(])"
+    "([)]"
+    "(([])(){})"
+
+    规则
+    遇到开括号，push
+    遇到闭括号，查
+        ok -> pop
+        no -> error
+
+    正常情况
+    char    Stack
+
+    (       (
+    (       ((
+    [       (([
+    ]       ((
+    )       (
+    {       ({
+    }       (
+
+    其它情况
+    1.  字符串本身是 "" 
+        ->  true
+    2.  遇到闭括号，栈是空的 ")"
+        ->  false
+    3.  匹配完了，栈里还有东西 "("
+        ->  false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    错误情况
+    1.  在合括号的时候，char 和 Stack.peek 不匹配
+        "(]"
+    2.  在闭括号时，stack 已经空了
+        ")"
+    3.  执行完了 Stack 没空
+        "((("
+
+
+数学公式计算问题
+    "3+2*5-6"
+    方案
+        1. 补$
+        "3+2*5-6$"
+        2.  取值
+            一个数 + 一个运算符
+            1.  数字直接push到数字栈
+            2.  运算符
+                if 当前运算符 比 栈里顶的运算符 的优先级要 高 then
+                    push 运算符 到 运算符的栈
+                else then = 小于
+                    num pop 2个
+                    ope pop 1个
+                    计算
+                    结果值 push 到 num 里
+
+    正常情况
+        num empty
+        ope empty
+
+        pai 3+
+        num 3
+        ope +
+
+        pai 2*
+        num 3, 2
+        ope +, *
+
+        pai 5-
+        num 3, 2, 5
+        ope +, *
+        num 3, 10
+        ope +
+        num 13
+        ope
+        num 13
+        ope -
+
+        pai 6$
+        num 3, 10, 6
+        ope +, -
+        num 3, 4
+        ope +,
+        num 7
+        ope
+        num 7
+        ope $
+
+方法调用问题
+
+Queue
+队列
+    ADT
+        功能
+            存
+            取
+            查大小
+            查队头
+        特性
+            先进先出
+Array-based Queue
+    时间复杂度
+        enqueue 1
+        dequeue n
+        peek 1
+        size 1
+
+Array-based Cycle Queue
+
+递归
+    思维
+
+Queue Java API
+    interface Queue
+    interface Deque
+
+
+
+Fib 问题
+    1, 1, 2, 3, 5, 8, 13 ...
+    Fib(n)
+    Fib(4) = 3
+
+Fib One pass
+    fib(n){
+        if n = 1 or = 2 return 1
+
+        a <- 1
+        b <- 1
+        for i <- 1 to n - 2 then
+            temp = a + b
+            a = b
+            b = temp
+        return b
+    }
+
+Fib Recursion
+    fib(n)
+        if n = 1 or = 2 then
+            return 1
+        else
+            return fib(n - 1) + fib(n - 2)
+
+汉诺塔问题
+    hanoi(100, A, B, C)
+    hanoi(n, src, mid, tar)   几个，from, middle, to
+        hanoi(n - 1, src, tar, mid)
+        move(n, src, tar)
+        hanoi(n - 1, mid, src, tar)
+
+使用 Recursion Tree 解决时间复杂度 带递归的
+
+
+Power(n)
+    return power(n/2) * power(n/2) * 2;
+
+    int half = power(n/2);
+    return half * half * 2;
+T(N) = t(n/2) + 1
+
+
+作业 2
+    ArrayList
+        实现代码
+        具体见 lab页面
+    使用Stack 验证 括号合法性
+        代码
+        具体见 lab页面
+    使用Stack 计算 表达式的值
+        代码
+        具体见 lab页面
+
+倍数降级
+
+2的n次方问题
+    2^n
+
+    递归 常量降级
+        p2(n)
+            if n = 1
+                return 2
+            else
+                return 2 * p2(n-1);
+
+
+
+    递归 倍数降级
+        p2(n)
+            if n = 1
+                return 2
+            else
+                if n is 偶数
+                    n2 <- p2(n/2)
+                    return n2 * n2
+                else
+                    n2 <- p2(n/2)
+                    return * 2
+        theta(logn)
+
+Binary Search
+    1	3	4	5	9	15	21	73	89	92
+    3
+
+
+    1 3 -> 3
+    low  0
+    high 1
+    mid  0
+
+    low  1
+    high 1
+    mid  1
+
+Quick Select
+    给定一个数组 没有排序
+    我想找到 第 i 个大的数是谁
+
+    如果 先排序再选号 nlogn
+
+    意图
+        找到一个中轴点 x
+        < x | x | > x
+        x | < x | > x | ?
+
+        如果 j > ax
+            j++
+        如果 j < ax
+            swap (i+1, j)
+            i++
+            j++
+    5	10	7	2	1	4	8	9	12	6
+    i   j
+
+    5	10	7	2	1	4	8	9	12	6
+    i       j
+
+    5	10	7	2	1	4	8	9	12	6
+    i           j
+
+    5	2	7	10	1	4	8	9	12	6
+        i           j
+
+    5	2	1	10	7	4	8	9	12	6
+            i           j
+
+    5	2	1	4	7	10	8	9	12	6
+                i           j
+
+    5	2	1	4	7	10	8	9	12	6
+                i               j
+
+    5	2	1	4	7	10	8	9	12	6
+                i                           j
+
+    4   2   1   5	7	10	8	9	12	6
+
+    if i = k
+        return a[i] // pivot
+    else k < i
+        quickSelect(A, 1, i - 1, k)
+    else k > i
+        quickSelect(A, i + 1, n, k)
+
+    时间复杂度
+        worst case
+            T(n) = Theta(n) + T(n-1) = n^2
+            已经排好序 升序 降序
+
+        best case
+            T(n) = Theta(n) + T(n/2) = n
+            每次的pivot正好是中间值
+
+        n < nlogn
+
+
+
+Divide and Conquer
+    步骤
+        1.  Divide / Partition
+            大问题 拆成 小问题
+        2.  Conquer
+            解决常量级别问题
+        3.  Combine
+            小答案 合成 大答案
+
+
+Merge Sort
+    5	10	7	2	1	4	8	9	12	6
+
+
+    1.  我能不能将这个数组拆成两个
+        5	10	7	2	1
+        4	8	9	12	6
+
+
+
+    3.  如果我拿到两个已经排序好的小答案，能不能够得到一个大的答案
+        1   2   4   5   6   7   8   9   10  12
+
+        combine(A, B)
+            while A is not empty and B is not empty then
+                if (A.head < B.head){
+                    c = Dequeue(A)
+                else
+                    c = Dequeue(B)
+                Enqueue(C, c)
+
+
+Quick Sort
+    5	10	7	2	1	4	8	9	12	6
+    2   1   4   5   10  7   8   9   12  6
+                ^
+    时间复杂度分析
+        best case
+            nlogn
+        worst case
+            n^2
+        average case
+            nlogn ? MIT 视频
+
+
+Counting Sort
+    问题
+        给定一个集合 A 里面有 n 个数
+        但是 这 n 个数的范围 是在 1 - k 的范围内
+        需要对它进行排序
+
+    解决办法
+        1   2   3   2   3   2   1   2   4
+
+        开数组
+        1   2   3   4
+        2   4   2   1
+        2   5   8   8
+
+        _   1   _   _   _   2   _   _   4
+
+
+        1   1   2   2   2   2   3   3   4
+
+    约束
+        k 要小
+
+Bucket Sort
+    问题
+        集合 A， 数据 a....
+        a = (1, 2)
+        黑桃1
+        排序
+        维度1 k 有数量限制
+
+        根据维度1 创建 k 个桶
+
+
+Radius Sort
+    问题
+        排序
+    345     345     329     267
+    278     865     345     278
+    865     486     865     329
+    567     567     567     345
+    329     267     267     486
+    486     278     278     567
+    267     329     486     865
+
+作业 3
+    Binary Search
+        代码
+    Quick Select
+        代码
+    Merge Sort
+        代码
+    Quick Sort
+        代码
+
+
+Set ADT
+    功能
+        能存
+        不能取
+        能遍历
+    特性
+        不保留顺序
+        不能重复 (Bag, 能重复)
+
+    实现?
+        put(value:int)
+        size() -> int
+        toString()
+
+    Set java API
+        put 3
+        exist 3 -> true
+        put 5 
+        exist 5 -> true
+        exist 6 -> false
+
+Hash
+    概念
+        不是ADT
+    原理
+
+        "ZZ" = 6
+        "SS" = 2
+        "ZZZZZ" = 15
+        "YY" = 6
+        "ZZZZ" = 12
+        0
+        1
+        2   SS, ZZZZ
+        3   
+        4
+        5   ZZZZZ
+        6   ZZ, YY
+        7
+        8
+        9
+
+    collision
+        什么是
+            有两个数据算出来的生辰八字 一样 / %尺寸 以后 一样
+        Seperate Chain 外接 list 解决
+            Array > List/Set
+            时间复杂度
+                定位 1
+                确定不重复 n/size
+
+        Linear Probing 后移解决
+
+
+    hash function
+        方面
+            数据提供方处理
+                h(x) -> y
+            hash存储方处理
+                h'(x) = h(x) mod size
+
+        要求
+            1.  h(x) = y, h(x') = y', x = x' === y = y' 硬性要求
+            2.  h' y 均匀分布 -> h y 均匀分布
+            3.  h y 值 范围要尽可能的大
+
+
+
+    hash 扩容 / rehash
+        所有元素 重新算一次 hash，重新安排房间
+
+    hash 与 java api
+
+    存储
+        int
+            1
+        String
+            取决于 String 的长度
+            String 要尽可能的短
+
+
+Map
+    功能
+        存包处
+        根据一个 识别符(键key) 存一个 数据(值value)
+        用 key 存
+        用 key 取
+    特性
+        key 不能重复
+        一个 key 只能有一个值
+
+    函数
+        put(k, v)
+        get(k) -> v
+
+        put 3 2
+        put 2 3
+        get 3 -> 2
+        put 3 4
+        get 3 -> 4
+        size -> 2
+        remove 3
+        size 1
+        get 3 -> null
+
+        put "A" 2
+        put "Z" 3
+        get "A" -> 2
+        Entry<T, U>
+        +   key:T
+        +   value:U
+        List[e, e, e, e, e, ]
+            get -> O(n)
+            put -> O(n)
+            remove -> O(n)
+
+        put 
+
+        
+    实现?
+        linkedlist
+        [v|nextNode]
+        [k|v|nextNode]
+
+        2-array
+        [k, k, k, k]
+        [v, v, v, v]
+
+        HashSet<Entry>
+        Entry
+        +   k
+        +   v
+        +   h(k)
+
+
+
+
+
+    Map java API
+
+
+问题
+    最长字母
+        >   "aabbbcccbcbcbabc"
+        <   7
+
+        算法
+            var map:HashMap<Character, Integer>
+            for c in str {
+                int count = map.get(c)
+                count ++;
+                map.put(c, count)
+            }
+
+            return map.values.max;
+
+
+    2sum
+    https://leetcode.com/problems/two-sum/#/description
+
+        算法
+            map = Map<int, int>
+            for (i, v) in arr
+                map.put(v, i)
+
+            for key in map.keys
+                if map.keys.containsKey(target - key)
+                    return [map.get(key), map.get(target - key)];
+
+            map = Map<int, int>
+            for (i, v) in arr
+                j = map.get(target - key)
+                if j != null {
+                    return [i, j];
+                }
+                map.put(v, i)
+
+
+    Longest Harmonious Subsequence
+    https://leetcode.com/contest/leetcode-weekly-contest-33/problems/longest-harmonious-subsequence/
+
+    Longest Substring
+    https://leetcode.com/problems/longest-substring-without-repeating-characters/#/description
+
+动态规划
+    捡硬币问题
+        20 10 20 50 20 10 20
+        V(n)
+        vi
+        (1)
+
+            捡
+                va = 20 + S(5)
+            不捡
+                vb = 0 + S(6)
+            return max(va, vb)
+
+        V(n)
+            if n == 1 return v[1]
+            if n == 0 return 0
+
+            return max(v[n] + V(n - 2), V(n - 1))
+
+        V7
+            V6
+                V5
+                    V4
+                    V3
+                V4
+                    V3
+                    V2
+            V5
+                V4
+
+                V3
+
+
+    分析
+        Overlapping Subproblems
+
+        Optimal Substructure
+
+    解决
+        1.  Bottom-up
+
+        v   20  10  20  50  20  10  20
+        i   1   2   3   4   5   6   7
+        V(i)20  20  40  70  70  80  90
+
+
+        2.  Top-down
+            Memorization
+
+            map<n, value(n)>
+            V(n)
+            map.put(n, V(n))
+            V(n)
+
+    knapsack problem
+        K(n, w)
+        wi,vi
+        P1 ... Pn
+        w1
+        v1
+
+        K(n, w) => v
+
+        (n)
+            拿
+                vn + K(n - 1, w - wn)
+            不拿
+                0 + K(n - 1, w)
+            return max ...
+
+        K(n, W)
+            if n == 0
+                return 0
+
+            if W < wn
+                return K(n - 1, w)
+            else
+                max1 = vn + K(n - 1, w - wn)
+                max2 = K(n - 1, w)
+                return max (max1, max2)
+
+
+
+
+    Rod Cutting
+        S(n)
+            if n = 0 return 0;
+
+            R1 = V1 + S(n - 1)
+            R2 = V2 + S(n - 2)
+            R3 = V3 + S(n - 3)
+            ...
+            min = min(10, n)
+            Rmin = Vmin + S(n - min)
+
+            return max(R1...Rmin)
+
+        S 200
+            S199
+                S198
+                S197
+                ...
+                S189
+            S198
+            ...
+            S190
+                S189
+                S188
+                ...
+                S180
+
+
+
+
+
+
+    Longest Common Subsequence
+    "13579"5
+    "34567"5
+    "3577"
+
+    "77123456" n
+    "71234567" m
+    S(n, m)
+
+    "abc01"
+    "def23"
+    "abc10" "def0"
+    "abc1" "def01"
+
+
+
+
+
+
+
+    Delete Operation for Two Strings
+    https://leetcode.com/contest/leetcode-weekly-contest-32/problems/delete-operation-for-two-strings/
+
+
+作业 4
+
+    Longest Harmonious Subsequence
+        伪代码
+
+    Longest Substring
+        伪代码
+
+    捡硬币问题
+        bottom-up 代码
+        top-down 代码
+
+    Rod Cutting
+        伪代码
+
+Greedy
+    Kicknap Problem
+
+    Event Planing Problem
+
+    Gas Filling Problem
+
+    Outline Selection
+
+Map<String, List<String>>
+
+Tree ADT
+    [08_Trees]
+    名词
+
+
+    二叉树
+
+    实现
+
+    定义
+        Full / Proper
+        Complete
+
+    遍历
+        Expression
+
+BST
+    [11_BinarySearchTrees]
+    定义
+        二叉树
+        InOrder 升序的
+
+AVL Tree
+    [11_AVL]
+
+24 Tree
+    [11_24Trees]
+
+作业  5
+    Tree
+        要求
+        根据要求 完成类
+
+        类
+        TreeNode
+
+            属性
+            value:int get set
+            children:List<TreeNode>
+
+            方法
+            addChild(node:TreeNode)
+            children() -> List<TreeNode>
+
+        类
+        Tree
+
+            属性
+            root:TreeNode get set
+
+            方法
+            buildDemo()
+            强行构建一个树
+            树的结构是这样子的
+            树根 0
+            0 下有 1 8
+            1 下有 2 4 5
+            2 下有 3
+            5 下有 6
+            5 下有 7
+            8 下有 9
+            9 下有 10
+
+            valuesByInOrder() -> List<Integer>
+            按照前序遍历 收集所有的值 并返回
+            先用递归写，再改成用 stack / queue / deque 写
+
+            valuesByPostOrder() -> List<Integer>
+            按照后序遍历 收集所有的值 并返回
+            先用递归写，再改成用 stack / queue / deque 写
+
+            trace()
+            输出样式
+            0
+            +   1
+            |   +   2
+            |   |   +   3
+            |   +   4
+            |   +   5
+            |       +   6
+            |       +   7
+            +   8
+                +   9
+                    +   10
+
+            height() -> int
+            返回高度
+
+            (pairs:int[][])
+            构造方法
+            根据数值对生成树
+            pairs 为 一个二维数组，由一堆数对儿组成，
+            {{1, 2}, {2, 3}, {2, 4}, {3, 5}}
+            比如上面，每个数对表达一个关系，{1, 2} 代表 1是2的父结点
+            假定：
+            1.  数对至少有一对
+            2.  数对里的第一个数对的左边的数 就是根节点
+            3.  数对里之后出现的数对中的左边的数，一定在之前的数对里右边出现过
+
+            测试case
+            {{1, 2}}
+            {{1, 2}, {2, 3}}
+            {{1, 2}, {1, 3}}
+            {{1, 2}, {2, 3}, {2, 4}, {3, 5}}
+            {{1, 2}, {2, 3}, {2, 4}, {3, 5}, {2, 6}}
+
+"Hello world" ACSII
+1.  不让用 map
+int[] firstIndex = new int[128]
+firstIndex[all] = -1;
+
+int[] count = new int[128]
+for i = 0..<str.length
+    char c = str.charAt(i)
+    count[c] += 1
+    if firstIndex[c] < 0
+        firstIndex[c] = i
+
+count['a']
+firstIndex['a']
+
+nodes = new LL<Node>()
+for i = 0..<128
+    if count[i] > 0
+        n = new Node
+        n.c = (char)i
+        n.frequ = count[i]
+
+
+
+
+
+
+
+
+Priority Queue ADT
+    功能
+        remove()
+        insert()
+        size()
+    特性
+        每次取出来的都是最小/最大的
+
+    实现
+        List n
+        BST logn - n
+        Heap logn
+
+        List
+            放 随便放
+            1
+            取的时候 找最小值
+            n
+            n^2
+        List
+            放的时候 插入放
+            n
+            取的时候 取第一个
+            1
+            1 +.. n + 1 + ... 1
+            n ^ 2 + n
+            n ^ 2
+
+Heap
+    [07.02]
+    Property
+
+    Eject 弹出
+        log n
+    Inject 放入
+        log n
+    Construct
+        log 1 + ... log n
+
+HeapSort
+    1.  Array
+    2.  Array -> Heap O(n)
+    3.  n * eject() n log n
+        log1 +...+ logn = nlogn
+
+Huffman Tree
+    ASCII Fix
+    3 fix
+    Dynamic
+    Confliction
+    Tree
+    Build Tree
+
+
+Graph
+    Ack
+        Vertex / Node
+        Edge
+        End vertices / Incident
+        Vertex / Adjacent / Neighbours / Degree
+        Edge / Parallel edges / Self-loop
+        Connected / Not Connected / Connected Components
+        Undirected / Directed
+        Unweighted / Weighted
+        Dense / Sparse
+        Path / Simple Path
+        Cycle / Simple Cycle
+        Cyclic / Acyclic / Directed Cyclic / Directed Acyclic Graph(DAG)
+        Spanning tree
+    DS
+        adjacency matrix
+        adjacency list
+        OO
+            unweighted
+            Node
+                value:String
+                adjacentNodes:[Node]
+            Graph
+                nodes:[Node]
+
+            1.
+            Node
+                value:String
+                adjacentNodes:{String:Node}
+            Graph
+                nodes:{String:Node}
+
+            2.
+            Node
+                value:String
+                edges:[Edge]
+
+            Edge
+                value:int
+                nodes:[Node]
+
+            Graph
+                nodes:[Node]
+                edges:[Edge]
+
+
+
+    BFS
+
+    Strongly Connected Components
+        DFS
+    Topological Sort
+        DFS
+
+    Minimum Spaning Tree
+        Prim
+            .->
+        Kruskal
+            - - -
+
+    Shortest Path
+        one to Many
+            Dijkstra
+            Bellman-Ford
+                Negative Weight / No Negative W C
+        many to many
+            walshall's
+                unweighted Transitive Closure
+            Floyd's
+                Weighted sp
+
+    Amortized
+
+
+GATC
+
+
+作业：
+1.  写 BFS, DFS,
+2.  求最短路径
+给定一个二维数组，比如
+0, 1, 0, 0
+0, 0, 0, 1
+0, 0, 0, 1
+0, 1, 0, 0
+给定一个起始点坐标，和一个结束点坐标，比如
+(0, 0), (3, 3)
+坐标系左上角为原点
+，求最短路径，
+输出
+(0, 0), (1, 0), (1, 1), (1, 2), (2, 2), (3, 2), (3, 3)
+
+
+.
