@@ -53,8 +53,67 @@ Java 200
 
                 // 在代码里使用 dice
 
+        distribution:
+          03 changed
+          03 need to rebuild jar
+          v0.0.1
+          v0.0.2
+          04 recopy and paste
+
+
+    Framework
+    
+         别人写好的工具，类，函数，接口
+
+    心态：
+        不是所有的代码需要自己写
+        去找找，有没有现场的框架
+
+
+    Apache https://commons.apache.org/proper/commons-cli/index.html
+    
+    download apache common cli
+    unzip
+    find common-cli-1.4.jar
+
+    build lib
+    copy jar to lib
+
+    link the jar to (OMS, dependence)
+
+
+   Build 
+       compile run
+       .java ->.class -> machine code
+
+
+       javac -- ?   .jar
+
+
+       执行是跑了javac和java（ build + run ），build是指跑javac
+
+
+ Maven package management:
+    .jar problem:
+
+         when new version published, you need to download and copy, paste
+
+    Package /module dependency Management
+
+    advantage:
+
+         automate download the new frame      
+
+
+
 
 Command+1 开关左边窗口
+
+
+
+
+
+
 
 Java ->Scala/Kotlin:
 1.	Xxx.scala->XX.java->XX.class->machine code
@@ -137,6 +196,167 @@ What kind of exception:
 Halder exception
 Null Pointer Exception
 Number format exception
+
+
+Lesson4
+
+做一个ToDoList：
+
+需求分析：
+   功能分析：
+
+      项：   
+        增加、删除、修改
+        排序，设置时间、置顶、完成、搜索、负责人
+      分组：
+         添加、修改、删除
+         加项，修改项
+      标签：
+         。。
+      用户base
+
+      社交：
+         share,print,朋友圈
+
+    缩小需求：
+      显示、添加
+
+    环境需求
+      1. 打算把程序部署到哪些平台 mac/windows/iphone/web/device
+      2. 用户跟数据的增长需求
+
+
+设计分工：
+    技术 设计
+         架构 设计
+
+            Architecture Design
+            用什么平台？ .net/macos/ios/java/react web/ 
+            用什么语言？ .net: c#,c++,c  /ios mac: c,C++,c#  
+            用什么框架？ frame帮助你
+
+            Java JVM
+            Java
+            Swing/Zwing
+
+        具体 设计
+            Technical Design(Developer)
+            代码结构
+
+            数据结构
+            服务接口
+            页面分析
+            组建分析
+
+    界面 设计
+           UI／UX Design（Design)
+
+具体设计
+    界面跟数据分离
+
+    core
+       程序，没有界面，也能正常运行
+
+    UI
+       界面相关的交互元素
+
+    例子：
+       计算器
+
+    层分类
+
+       modern 
+           数据
+       service
+           对数据的操作
+
+
+
+
+
+Lesson 5
+
+   问答
+      文件
+      工作空间
+
+         项目工作空间   tongbushiyong
+         IDE工作空间    dakai you xiangguan peizhi
+         project
+            front/   js        <----viscode
+                +src        <---source code root
+
+
+            back/    java     <---Intellj
+                +src         <----source code root
+
+
+
+
+      源代码根目录  zai bianyi de shhou ,xuyaoba mingling zhidingdao yuandaima
+
+
+   代码需求：
+     1. 备份 
+     2. 多人协同
+
+     版本管理：
+        SVN
+        Git
+
+    Git:
+       Repository : 一份代码备份
+
+       分析：
+        2个Repository：
+          1个在本级，一个在云上
+          多个Repository之间，一个改动，不会影响另外的修改
+
+        Clone/Push/Poll
+            Cline: 云上有，本机没有
+            Push：把本机的修改，update到云端
+            Poll：把云端的修改，同步到本机
+
+        Commit：一次修改
+
+
+        Repo: 记录 从没有 是如何变道 有的
+
+        一次修改：
+        + 多处修改
+
+        Command:
+           git  status
+           git add .
+           git commit -m  "message"
+
+           恢复：
+           git checkout -- .
+
+        在Github里面，在创建的时候，千万不要点 initialize readme
+
+
+
+           git remote add Name git@github.com:Yollyliu/learngit.git
+
+
+           git push Name master
+
+
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
